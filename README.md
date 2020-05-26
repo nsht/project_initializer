@@ -1,4 +1,5 @@
 # project_initializer
+<img src="https://github.com/ryux00/project_initializer/blob/master/pcreate.gif">
 
 # What it does:
 Creates a directory in the current working directory
