@@ -1,1 +1,5 @@
 venv
+.vscode/settings.json
+build/
+__pycache__/
+pcreate.spec
