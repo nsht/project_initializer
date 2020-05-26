@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 import sys
 import subprocess
@@ -10,7 +12,9 @@ CHECK = f"{colorama.Fore.GREEN}✔{colorama.Style.RESET_ALL}"
 CROSS = f"{colorama.Fore.RED}✘{colorama.Style.RESET_ALL}"
 ERASE_LINE = '\033[2K'
 
-dir_name = input("Enter directory name ")
+dir_name = sys.argv[1]
+if not dir_name:
+    dir_name = input("Enter directory name ")
 path = f"{os.getcwd()}/{dir_name}"
 print(f"Creating directory {dir_name}",end="\r",flush=True)
 try:
@@ -19,7 +23,7 @@ except Exception as e:
     print(f"{CROSS} error creating directory")
     print("Check if directory already exists")
     print("Exiting")
-    exit(code=1)
+    sys.exit(1)
 
 time.sleep(1)
 
@@ -33,7 +37,7 @@ try:
 except Exception as e:
     print(f"{CROSS} error initializing git. Exiting...")
     print(result.stderr)
-    exit(code=1)
+    sys.exit(1)
 
 # print(result.stdout)
 print(f"{CHECK} Initialized git")
