@@ -2,8 +2,9 @@
 <img src="https://github.com/ryux00/project_initializer/blob/master/pcreate.gif">
 
 # What it does:
-Creates a directory in the current working directory
-Initialized git inside that directory
+* Creates a directory in the current working directory
+
+* Initializes git inside that directory
 
 # How to 
 * Download [pcreate](https://github.com/ryux00/project_initializer/releases/download/v1.0/pcreate) file from release.
