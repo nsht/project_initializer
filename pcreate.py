@@ -41,3 +41,14 @@ except Exception as e:
 
 # print(result.stdout)
 print(f"{CHECK} Initialized git")
+
+try:
+    print(f"Opening vscode",end="\r",flush=True)
+    result = subprocess.run(["code", "."],cwd=path,check=True,capture_output=True)
+except Exception as e:
+    print(f"{CROSS} error opening vscode. Exiting...")
+    print(result.stderr)
+    sys.exit(1)
+
+
+
