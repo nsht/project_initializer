@@ -25,13 +25,12 @@ except Exception as e:
     print("Exiting")
     sys.exit(1)
 
-time.sleep(1)
 
 print(ERASE_LINE, end="\r", flush=True)
 print(f"{CHECK} {dir_name} created")
 
 print("Initializing git",end="\r",flush=True)
-time.sleep(1)
+
 try:
     result = subprocess.run(["git", "init"],cwd=path,check=True,capture_output=True)
 except Exception as e:
